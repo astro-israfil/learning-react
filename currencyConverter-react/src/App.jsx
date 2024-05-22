@@ -44,13 +44,12 @@ function App() {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         }} className='w-full h-screen flex justify-center items-center text-white'>
-          <div className='w-full max-w-md p-12 relative'>
-            <div className='absolute left-0 top-0 right-0 blur-md w-full h-full bg-slate-700'></div>
-            <h1 className='text-center text-2xl'>Currency Converter App</h1>
+          <div className='w-full max-w-md p-12 relative bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100'>
+            <h1 className='text-center text-2xl relative z-10'>Currency Converter App</h1>
             <div className='my-4 relative'>
               <InputBox label="From" amount={amount} onAmountChange={onAmountChange} currency={from} onCurrencyChange={onFromCurrencyChange} currencyRate={currencyRate} />
               <button className='bg-blue-600 text-white outline-none rounded-sm py-2 px-3 absolute left-1/2 top-1/2 mt-3 -translate-x-1/2 -translate-y-1/2' onClick={swapConvertion}>Swap</button>
-              <InputBox label="To" amount={convertedAmount} onAmountChange={() => {}} currency={to} onCurrencyChange={onToCurrencyChange} currencyRate={currencyRate} />
+              <InputBox label="To" amount={convertedAmount} onAmountChange={() => {}} currency={to} onCurrencyChange={onToCurrencyChange} currencyRate={currencyRate} isDisabledField />
             </div>
             <div className='position relative z-10'>
               <button onClick={convertCurrency} className='bg-blue-700 text-white rounded-sm w-full py-2'>Convert {from.toUpperCase()} to {to.toUpperCase()}</button>
