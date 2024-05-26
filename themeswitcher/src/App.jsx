@@ -18,6 +18,7 @@ function App() {
       <div className="w-full h-screen bg-white dark:bg-slate-700">
         <Navbar />
         <Card />
+        <h1 className="text-slate-900 dark:text-blue-200 text-5xl text-center font-bold mt-6">The ThemeSwitcher Project</h1>
       </div>
     </ThemeContextProvider>
   )
