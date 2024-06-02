@@ -16,7 +16,7 @@ function TodoInput({value, setValue, isUpdate, updateId, setIsUpdate, setUpdateI
     return (
         <>
             <div className="flex flex-wrap w-full max-w-xl min-w-80 mx-auto">
-                <input className="flex-1 rounded-e-0 rounded-s-md outline-none p-2 text-slate-700" type="text" value={value} onChange={(e) => setValue(e.target.value)} />
+                <input className="flex-1 rounded-e-0 rounded-s-md outline-none p-2 text-slate-700" type="text" value={value} onChange={(e) => setValue(e.target.value)} placeholder="Enter your todo" autoFocus />
                 {
                     !isUpdate ? 
                         <button className="bg-green-600 text-white py-2 px-4 rounded-e-md" onClick={handleClick}>ADD</button>
